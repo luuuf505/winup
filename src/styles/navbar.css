@@ -1,0 +1,233 @@
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 14px 18px;
+  height: var(--header-height);
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav--scrolled{
+  background: rgba(10,6,18,.62);
+  backdrop-filter: blur(14px);
+  border-bottom-color: rgba(255,255,255,.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,.25);
+}
+
+.nav__inner{
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.nav__logo{
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.nav__brand{
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  background: linear-gradient(90deg,#f2e991,#9605b0,#43007d);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(150,5,176,.25);
+}
+
+.nav__links{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav__links button{
+  background: transparent;
+  border: 0;
+  color: rgba(255,255,255,.82);
+  font-size: 13.5px;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 999px;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.nav__links button:hover{
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.nav__cta{
+  background: linear-gradient(135deg,#9605b0,#43007d) !important;
+  color: #fff !important;
+  padding: 10px 14px !important;
+  box-shadow: 0 16px 50px rgba(150,5,176,.28);
+}
+
+.nav__cta:hover{
+  box-shadow: 0 22px 70px rgba(150,5,176,.38);
+}
+
+/* Burger */
+.nav__burger{
+  display: none;
+  width: 46px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.nav__burger span{
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  opacity: .9;
+  border-radius: 999px;
+}
+
+/* Mobile */
+.nav__mobile{
+  max-width: 1180px;
+  margin: 10px auto 0;
+  display: none;
+  background: rgba(10,6,18,.75);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  padding: 14px;
+  backdrop-filter: blur(14px);
+}
+
+.nav__mobile button{
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: rgba(255,255,255,.9);
+  padding: 12px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.nav__mobile button:hover{
+  background: rgba(255,255,255,.06);
+}
+
+.nav__wa{
+  display: block;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(242,233,145,.10);
+  border: 1px solid rgba(242,233,145,.22);
+  color: rgba(255,255,255,.95);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .nav__links{ display: none; }
+  .nav__burger{ display: flex; }
+  .nav__mobile.is-open{ display: grid; gap: 6px; }
+}
+/* Links (react-router Link/NavLink) */
+.nav__links a{
+  color: rgba(255,255,255,.82);
+  font-size: 13.5px;
+  padding: 10px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.nav__links a:hover{
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* En mobile también */
+.nav__mobile a{
+  width: 100%;
+  text-align: left;
+  color: rgba(255,255,255,.9);
+  padding: 12px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.nav__mobile a:hover{
+  background: rgba(255,255,255,.06);
+}
+
+/* Activo (si usas NavLink con className="active") */
+.nav a.active{
+  color: #f2e991;
+}
+/* Links (react-router Link/NavLink) */
+.nav__links a{
+  color: rgba(255,255,255,.82);
+  font-size: 13.5px;
+  padding: 10px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.nav__links a:hover{
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* En mobile también */
+.nav__mobile a{
+  width: 100%;
+  text-align: left;
+  color: rgba(255,255,255,.9);
+  padding: 12px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.nav__mobile a:hover{
+  background: rgba(255,255,255,.06);
+}
+
+/* Activo (si usas NavLink con className="active") */
+.nav a.active{
+  color: #f2e991;
+}
+.nav__logo{
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.nav__logo-img{
+  height: 50px;              /* ajustá según tu logo */
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 14px rgba(150,5,176,.25));
+}
+.nav__logo-img{
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.nav__logo:hover .nav__logo-img{
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 18px rgba(150,5,176,.45));
+}

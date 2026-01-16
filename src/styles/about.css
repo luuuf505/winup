@@ -1,0 +1,85 @@
+/* ABOUT PAGE */
+
+.about {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Título principal */
+.about__title {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg, #f2e991, #9605b0, #43007d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Intro */
+.about__intro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  color: rgba(255,255,255,.92);
+}
+
+/* Párrafos */
+.about p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.82);
+  margin-bottom: 18px;
+}
+
+/* Subtítulos */
+.about h2 {
+  margin-top: 34px;
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+/* Lista */
+.about__list {
+  margin: 18px 0 26px;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.about__list li {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: rgba(255,255,255,.9);
+}
+
+/* Cierre */
+.about__closing {
+  margin-top: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255,255,255,.95);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .about {
+    padding: 26px 0;
+  }
+
+  .about__title {
+    font-size: 30px;
+  }
+
+  .about p {
+    font-size: 14.5px;
+  }
+}
